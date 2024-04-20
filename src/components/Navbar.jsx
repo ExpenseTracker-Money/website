@@ -3,14 +3,18 @@ import { useState } from "react";
 import { close, logo, menu } from "../../public/assets";
 import { navLinks } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <h1 className="font-bold rounded-md cursor-pointer">ExpenseTracker</h1>
-      {/* <Image src={logo} alt="logo" className="w-[124px] h-[32px]"></Image> */}
+      {/* <h1 className="font-bold rounded-md cursor-pointer">ExpenseTracker</h1> */}
+      <Link href="/" >
+        <Image src={logo} alt="logo" className="w-[124px] h-[32px] cursor-pointer"></Image>
+      </Link>
+
       {/* Conditional rendering of menu toggle based on screen size */}
       <div className="sm:hidden">
         <Image
@@ -25,9 +29,8 @@ export default function Navbar() {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              index === navLinks.length - 1 ? "mr-0" : "mr-10"
-            } text-black`}
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? "mr-0" : "mr-10"
+              } text-black`}
           >
             <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
@@ -37,17 +40,15 @@ export default function Navbar() {
       {/* Sidebar for mobile */}
       <div className="sm:hidden">
         <div
-          className={`${
-            toggle ? "flex" : "hidden"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          className={`${toggle ? "flex" : "hidden"
+            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${
-                  index === navLinks.length - 1 ? "mr-0" : "mb-10"
-                } text-white`}
+                className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? "mr-0" : "mb-10"
+                  } text-white`}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
