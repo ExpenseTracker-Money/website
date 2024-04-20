@@ -26,7 +26,7 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={`${styles.heading2}`}>
-       The Best Expense Tracker, <br className="sm:block hidden" /> Your Ultimate Financial Companion.
+      Your Ultimate Financial Companion.<br className="sm:block hidden" /> 
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
       Easily track your spending, categorise transactions, and gain clarity on your financial milestones.Take Control of Your Finances with ExpenseTracker.money

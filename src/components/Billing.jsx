@@ -18,7 +18,7 @@ const Billing = () => (
 
     <div className="flex-1 flex justify-center items-start flex-col">
       <h2 className="font-poppins font-semibold xs:text-[48px] text-[40px] text-black xs:leading-[76.8px] leading-[66.8px] w-full">
-     Financial Oversight:  <br className="sm:block hidden" /> Track Every Transaction with Widgets
+      Track Every Transaction with Widgets<br className="sm:block hidden" /> 
       </h2>
       <p className=" font-poppins font-normal text-dimblack text-[18px] leading-[30.8px] max-w-[470px] mt-5">
       Stay on top of your finances with customizable widgets for all transactions, incoming, and outgoing, keeping you in control at a glance with ExpenseTracker.money
