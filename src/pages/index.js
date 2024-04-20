@@ -14,6 +14,8 @@ import {
 } from "@/components";
 import AllTransaction from "@/components/AllTrasnsaction";
 
+
+
 export default function index() {
   return (
     <div className=" w-full bg-primary overflow-hidden">
