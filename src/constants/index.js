@@ -14,7 +14,7 @@ export const navLinks = [
     title: "Product",
   },
   {
-    id: "contact us",
+    id: "mailto:sachikanta9692@gmail.com",
     title: "Contact Us",
   },
 ];
